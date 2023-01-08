@@ -24,10 +24,35 @@ module.exports = {
             use: 'ts-loader',
             exclude: /node_modules/,
           },
+
+          // Images
+          { test: /\.(jpg|png|gif|svg)$/,
+            use:[{
+                loader: 'file-loader',
+                options:{
+                  outputPath: 'Img/'
+                }
+            }]
+          },
+
+          // Fonts
+        { test: /\.(ttf|eot|woff|woff2)$/,
+        use:[{
+          loader: 'file-loader',
+          options:{
+            outputPath: 'fonts/'
+          }
+        }]
+      }
         ],
     },
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
+    },
+    performance: {
+      hints: false,
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000
     },
     devServer: {
       static: {

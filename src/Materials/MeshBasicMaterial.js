@@ -2,8 +2,9 @@
 
 import * as THREE from 'three';
 
-export function mat_Basic (string_color, bool_wireframe) {
+export function mat_Basic (string_color, texture, bool_wireframe) {
     const material = new THREE.MeshBasicMaterial({ 
+        map:texture,
         color: string_color,
         wireframe: bool_wireframe
     })

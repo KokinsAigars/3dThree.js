@@ -1,43 +1,45 @@
 
-/**
- * Loading Manager
- */
-const LoadingManager = new THREE.LoadingManager()
-LoadingManager.onStart = () =>
-{
-    console.log('loading started')
-}
-LoadingManager.onProgress = () =>
-{
-    console.log('Progress')
-}
-LoadingManager.onError = () =>
-{
-    console.log('on Error')
-}
 
+/**
+ * Images
+ * native javascript loading image
+ * 
+ */ import IMG_Color from './Textures/IMG_Color.jpg'; //_log(IMG_Color)
+   
+ 
+ 
+ /** Textures
+     */
+    // const image = new Image()
+    // image.src = IMG_Color;
+    // const texture_A = new THREE.Texture(image)
+    // image.onload = () => {
+    //     texture_A.needsUpdate = true;
+    // }
+
+    
 /**
  * Textures
  */
 import imageSource1 from './images.jpg'
 import imageSource2 from './image2.jpg'
+
 const textureLoader = new THREE.TextureLoader(LoadingManager)
-const textureA = textureLoader.load
-(
-    imageSource1,
-    () => 
-    {
-        console.log('load')
-    },
-    () => 
-    {
-        console.log('progress')
-    },
-    () => 
-    {
-        console.log('error')
-    }
+const texture_A = textureLoader.load (
+    IMG_Color,
+    // function load () {
+    //     console.log('load')
+    // },
+    // function progress () {
+    //     console.log('progress')
+    // },
+    // function error () {
+    //     console.log('error')
+    // },
 )
+
+
+
 const textureB = textureLoader.load(imageSource2)
 // textureB.repeat.x = 3
 // textureB.repeat.y = 3
@@ -73,8 +75,3 @@ const textureB = textureLoader.load(imageSource2)
 // const roughnessTexture = textureLoader.load('/textures/door/roughness.jpg')
 
 
-const image = new Image()
-image.onload = () => {
-    textureA.needsUpdate = true,
-    textureB.needsUpdate = true
-}
