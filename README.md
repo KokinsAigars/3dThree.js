@@ -1,5 +1,5 @@
 # 3dThree.js
-Loading 3D models into website using Three.js library
+Experiments with Three.js library
 
 ``` bash
 # Install dependencies (only the first time)
