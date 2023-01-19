@@ -5,7 +5,7 @@
 export const _log = console.log;
 
 // Sizes 
-export const sizes = {
+export const window_sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }

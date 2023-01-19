@@ -2,20 +2,20 @@
  * Event_Listeners.ts
  */
 
-import {sizes} from './Global_variable.js'
+import {window_sizes} from './Global_variable.js'
 import {canvas, camera, renderer,} from '../index.js'
 
 
 window.addEventListener('resize', () => {
     //console.log('resized')
     //  update sizes
-    sizes.width = window.innerWidth,
-    sizes.height = window.innerHeight   
+    window_sizes.width = window.innerWidth,
+    window_sizes.height = window.innerHeight   
 
     //  update camera
-    camera.aspect = sizes.width / sizes.height
+    camera.aspect = window_sizes.width / window_sizes.height
     camera.updateProjectionMatrix()
-    renderer.setSize(sizes.width, sizes.height)
+    renderer.setSize(window_sizes.width, window_sizes.height)
 
 })
 window.addEventListener('dblclick', () => {
@@ -46,3 +46,4 @@ window.addEventListener('dblclick', () => {
         }
     }
 })
+

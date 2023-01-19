@@ -1,0 +1,88 @@
+const path = require('path')
+
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        filename: 'main.js', 
+        path: path.resolve(__dirname, '../docs'),
+    },
+    mode: "production", //mode: "development",
+    devtool: "source-map",
+    module: {
+      rules: [
+        // HTML
+        { test: /\.(html)$/,
+          use: ['html-loader']
+        },
+
+        // JS
+        { test: /\.js$/,
+          exclude: /node_modules/,
+          use: [
+            'babel-loader'
+          ]
+        },
+
+        // SCSS [Sass]
+        { test: /\.s[ac]ss$/i,
+          use: [
+            "style-loader", // Creates `style` nodes from JS strings
+            "css-loader",   // Translates CSS into CommonJS
+            "sass-loader",  // Compiles Sass to CSS
+          ],
+        },
+
+        // Typescript
+        { test: /\.ts?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
+        },
+
+        // CSS
+        { test: /\.css$/,
+          use:[
+              MiniCSSExtractPlugin.loader,
+              'css-loader'
+          ]
+        },
+
+        // Images
+        { test: /\.(jpg|png|gif|svg)$/,
+          use:[{
+              loader: 'file-loader',
+              options:{
+                outputPath: 'docs/Img/'
+              }
+           }]
+        },
+
+        // Fonts
+        { test: /\.(ttf|eot|woff|woff2)$/,
+          use:[{
+            loader: 'file-loader',
+            options:{
+              outputPath: 'docs/fonts/'
+            }
+          }]
+        }
+      ],
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
+    },
+    performance: {
+      hints: false,
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000
+  },
+    devServer: {
+      static: {
+        directory: path.join(__dirname, 'docs'),
+      },
+      compress: true,
+      port: 9000,
+      client: {
+        logging: 'none'
+      },
+    },
+};
