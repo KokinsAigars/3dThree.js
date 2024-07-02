@@ -1,0 +1,19 @@
+
+	
+$body-color: rgb(255, 255, 255);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {overflow: hidden;}
+
+body {background-color: $body-color;}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
