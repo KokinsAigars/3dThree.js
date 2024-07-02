@@ -44,8 +44,8 @@ export let renderer;
 
 init();             // Initialize
 RelTimeRender();    // Rel Time Render enable orbit
-UCS ();             // show ucs coordinate system
-GEO_A ();           // tests for standart geometry and simple materials
+// UCS ();             // show ucs coordinate system
+GEO_A ();           // tests for standard geometry and simple materials
 
 // Initialize
 function init() {
@@ -90,7 +90,7 @@ function UCS () {
     const axesHelper = new THREE.AxesHelper(); 
     scene.add(axesHelper)
 }
-// tests for standart geometry
+// tests for standard geometry
 function GEO_A() {
 
     /** Loading Manager
@@ -138,7 +138,7 @@ function GEO_A() {
     */
         // const mat_basic_A = mat_Basic("", texture_A, false);
         const mat_basic_B = mat_Basic("gray", texture_diffuse, false);
-        const mat_basic_C = mat_Basic("gray", "", true);
+        const mat_basic_C = mat_Basic("gray", "", false);
 
     /** Group
         */
@@ -151,9 +151,9 @@ function GEO_A() {
         // scene.add(BOX_A)
         // group_A.add(BOX_A)
 
-        const Plane_A = Create_Plane(mat_basic_B)
-            Plane_A.rotation.x = -Math.PI * 0.5 //rotation in radians
-        scene.add(Plane_A)
+        // const Plane_A = Create_Plane(mat_basic_B)
+        //     Plane_A.rotation.x = -Math.PI * 0.5 //rotation in radians
+        // scene.add(Plane_A)
 
         // const TorusKnot = Create_TorusKnot(mat_basic_C)
         //     TorusKnot.position.x = 1.5
