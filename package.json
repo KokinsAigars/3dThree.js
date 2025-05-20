@@ -13,24 +13,24 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "dat.gui": "^0.7.9",
-    "esbuild": "0.23.0",
-    "lodash": "^4.17.21"
+   //     "dat.gui": "^0.7.9",
+    //    "esbuild": "0.23.0",
+    //    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@types/sass-loader": "^8.0.8",
-    "@types/webpack": "^5.28.5",
-    "css-loader": "^7.1.2",
-    "node-sass": "^9.0.0",
-    "sass": "^1.77.6",
-    "sass-loader": "^14.2.1",
-    "style-loader": "^4.0.0",
-    "three": "^0.166.1",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.5.3",
-    "web": "^0.0.2",
-    "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    //    "@types/sass-loader": "^8.0.8",
+    //    "@types/webpack": "^5.28.5",
+    //    "css-loader": "^7.1.2",
+    //    "node-sass": "^9.0.0",
+    //    "sass": "^1.77.6",
+    //    "sass-loader": "^14.2.1",
+    //    "style-loader": "^4.0.0",
+    //    "three": "^0.166.1",
+    //    "ts-loader": "^9.5.1",
+    //    "typescript": "^5.5.3",
+    //    "web": "^0.0.2",
+    //    "webpack": "^5.92.1",
+    //    "webpack-cli": "^5.1.4",
+   //     "webpack-dev-server": "^5.0.4"
   }
 }
