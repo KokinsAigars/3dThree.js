@@ -1,3 +1,7 @@
+
+// uncomment package.json dependencies, update them to newer versions
+// npm install
+
 # 3dThree.js
 Experiments with Three.js library
 https://threejs.org/
